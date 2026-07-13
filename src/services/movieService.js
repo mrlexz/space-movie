@@ -8,9 +8,8 @@ export const POSTER_URL = 'https://phimimg.com'
 // ============================================================
 const BASE_URL = "https://phimapi.com";
 export const CDN_IMAGE = (url) => {
-
   const flatUrl = url?.includes(POSTER_URL) ? url : `${POSTER_URL}/${url}`;
-  const res = flatUrl ? `https://phimapi.com/image.php?url=${encodeURIComponent(flatUrl)}` : null
+  const res = flatUrl ? flatUrl : `https://phimapi.com/image.php?url=${encodeURIComponent(flatUrl)}`
   return res
 };
 
